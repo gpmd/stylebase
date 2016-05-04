@@ -1,0 +1,38 @@
+/**
+ * objects/_padding.scss
+ */
+
+/* ==========================================================================
+   Padding
+   ========================================================================== */
+
+/* Padding vars
+   ========================================================================== */
+
+$paddings:
+    ('none' 0),
+    ($size-mod-xs 0.5em),
+    ($size-mod-s 1em),
+    ($size-mod-m 2em),
+    ($size-mod-l 4em),
+    ($size-mod-xl 8em);
+
+/* Generate padding
+   ========================================================================== */
+
+/**
+ * Auto generate padding selectors
+ */
+
+@each $padding in $paddings {
+    $padding-name: nth($padding, 1);
+    $padding-value: nth($padding, 2);
+
+    .o-padding-right--#{$padding-name} { padding-right: $padding-value !important; }
+    .o-padding-btm--#{$padding-name} { padding-bottom: $padding-value !important; }
+    .o-padding-left--#{$padding-name} { padding-left: $padding-value !important; }
+    .o-padding-top--#{$padding-name} { padding-top: $padding-value !important; }
+    .o-padding-horz--#{$padding-name} { padding: 0 $padding-value !important; }
+    .o-padding-vert--#{$padding-name} { padding: $padding-value 0 !important; }
+    .o-padding-all--#{$padding-name} { padding: $padding-value !important; }
+}

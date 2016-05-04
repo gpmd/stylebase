@@ -1,0 +1,107 @@
+/**
+ * objects/text.less
+ */
+
+/* ==========================================================================
+   Text
+   ========================================================================== */
+
+/* Family modifiers
+   ========================================================================== */
+
+.o-font-family--arial { font-family: $arial !important; }
+.o-font-family--georgia { font-family: $georgia !important; }
+
+/* Hide
+   ========================================================================== */
+
+.o-hide-text {
+  /* Method 1 */
+
+  position: absolute;
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+
+  /* Method 2 */
+
+  // border: 0;
+  // clip: rect(0 0 0 0);
+  // height: 1px;
+  // margin: -1px;
+  // overflow: hidden;
+  // padding: 0;
+  // position: absolute;
+  // width: 1px;
+
+  /* Method 3 */
+
+  //text-indent: 100%;
+  //white-space: nowrap;
+  //overflow: hidden;
+}
+
+/* Size modifiers
+   ========================================================================== */
+
+// Smaller
+.o-font-size--smaller { font-size: smaller !important; }
+
+// Larger
+.o-font-size--larger { font-size: larger !important; }
+
+/* Weight
+   ========================================================================== */
+
+.o-font-weight--normal { font-weight: normal !important; }
+
+.o-font-weight--bold { font-weight: bold !important; }
+
+/* Style
+   ========================================================================== */
+
+.o-font-style--normal { font-style: normal !important; }
+
+.o-font-style--italic { font-style: italic !important; }
+
+/* Decoration
+   ========================================================================== */
+
+.o-text-decoration--line-through { text-decoration: line-through !important; }
+
+/* Transform
+   ========================================================================== */
+
+.o-text-transform--uppercase { text-transform: uppercase !important; }
+
+/* Line height
+   ========================================================================== */
+
+.o-line-height--reset { line-height: 1 !important; }
+
+/* Alignment
+   ========================================================================== */
+
+.o-text-align--right { text-align: right !important; }
+
+.o-text-align--center { text-align: center !important; }
+
+.o-text-align--left { text-align: left !important; }
+
+/* Word break
+   ========================================================================== */
+
+.o-word--break { word-wrap: break-word !important; }
+
+/* Truncate
+   ========================================================================== */
+
+.o-text--truncate {
+  max-width: 100%;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  word-wrap: normal !important;
+}

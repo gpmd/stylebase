@@ -1,0 +1,252 @@
+// scss-lint:disable VendorPrefixes, PropertySpelling
+
+/**
+ * objects/_grid.scss
+ */
+
+/* ==========================================================================
+   Grid
+   ========================================================================== */
+
+/*
+ * Example usage:
+ *
+ * <div class='o-grid o-grid--has-gutter'>
+ *     <div class='o-grid__cell o-unit-1-1 o-unit-1-2--m o-unit-1-4--l'></div>
+ *     <div class='o-grid__cell o-unit-1-1 o-unit-1-2--m o-unit-1-4--l'></div>
+ *     <div class='o-grid__cell o-unit-1-1 o-unit-1-2--m o-unit-1-4--l'></div>
+ *     <div class='o-grid__cell o-unit-1-1 o-unit-1-2--m o-unit-1-4--l'></div>
+ * </div>
+ */
+
+/* Grid core
+   ========================================================================== */
+
+/**
+ * Grid container
+ * Must only contain `.o-grid` or `.o-grid__cell` components as children.
+ */
+
+// Flexbox
+.flexbox {
+    .o-grid {
+        display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox; // TWEENER - IE 10
+        display: -moz-flex;
+        display: -webkit-flex; // NEW - Chrome
+        display: flex; // NEW, Spec - Opera 12.1, Firefox 20+
+
+        -ms-flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+}
+
+// No flexbox fallback
+.no-flexbox {
+    .o-grid {
+        display: block;
+        padding: 0;
+        // margin: 0 -0.5 * $grid-gutter;
+        text-align: $grid-direction;
+
+        // Remove whitespace between `inline-block` elements
+        letter-spacing: -0.31em; // Webkit: collapse white-space between units
+        *letter-spacing: normal; // reset IE<8
+        *word-spacing: -0.43em;
+
+        // Fix text-rendering: optimizeLegibility in Webkit
+        text-rendering: optimizespeed;
+    }
+}
+
+/**
+ * Opera hack
+ */
+
+.no-flexbox {
+    .opera:-o-prefocus,
+    .o-grid { word-spacing: -0.43em; }
+}
+
+/**
+ * Child `grid` object adjustments
+ * Used for more complex fixed-fluid hybrid grids.
+ */
+
+.no-flexbox {
+    .o-grid > .o-grid {
+        overflow: hidden;
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+/**
+ * Grid units
+ * No explicit width by default. Apply `.o-unit-x-y` classes.
+ */
+
+// Flexbox
+.flexbox {
+    .o-grid__cell {
+        position: relative;
+        display: block;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+// Fix for ratio-embed content
+.flexbox {
+    .flex-fix { width: 100%; }
+}
+
+// No flexbox fallback
+.no-flexbox {
+    .o-grid__cell {
+        box-sizing: border-box;
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+        vertical-align: top;
+        text-align: $grid-direction;
+
+        // Reset text defaults
+        letter-spacing: normal;
+        word-spacing: normal;
+        text-rendering: auto;
+    }
+}
+
+/* Cell modifiers
+   ========================================================================== */
+
+/* Vertical alignment */
+
+// Flexbox
+.flexbox {
+    .o-grid__cell--middle { align-items: center; }
+    .o-grid__cell--top { align-items: flex-start; }
+    .o-grid__cell--bottom { align-items: flex-end; }
+}
+
+// No flexbox
+.no-flexbox {
+    .o-grid__cell--middle { vertical-align: middle; }
+    .o-grid__cell--top { vertical-align: top; }
+    .o-grid__cell--bottom { vertical-align: bottom; }
+}
+
+/* Grid modifiers
+   ========================================================================== */
+
+/**
+ * Add gutters
+ *
+ * @note (Should) work for both flexbox and no-flexbox grids
+ */
+
+.o-grid--has-gutter {
+    margin-left: -$gutter*2;
+
+    .o-grid__cell {
+        padding-left: $gutter*2;
+        padding-bottom: $gutter*2;
+    }
+}
+
+/* Horizontal alignment of grid cells */
+
+// Flexbox
+.flexbox {
+    .o-grid--center {
+        justify-content: center;
+        -webkit-box-pack: center; // Required for iOS
+    }
+
+    .o-grid--left {
+        justify-content: flex-start;
+        -webkit-box-pack: start; // Required for iOS
+    }
+
+    .o-grid--right {
+        justify-content: flex-end;
+        -webkit-box-pack: end; // Required for iOS
+    }
+}
+
+// No flexbox
+.no-flexbox {
+    .o-grid--center { text-align: center; }
+    .o-grid--left { text-align: left; }
+    .o-grid--right { text-align: right; }
+}
+
+/* Grid cell modifiers
+   ========================================================================== */
+
+/**
+ * Modifier: horizontally center one unit
+ * Set a specific unit to be horizontally centered. Doesn't affect
+ * any other units. Can still contain a child `grid` object.
+ */
+
+.no-flexbox {
+    .o-grid__cell--center {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+/**
+ * Modifier: align horizontally one unit to the left
+ * Set a specific unit to be horizontally on the left. Doesn't affect
+ * any other units. Can still contain a child `grid` object.
+ */
+
+.no-flexbox {
+    .o-grid__cell--left {
+        display: block;
+        margin-right: auto;
+    }
+}
+
+/**
+ * Modifier: align horizontally one unit to the right
+ * Set a specific unit to be horizontally on the right. Doesn't affect
+ * any other units. Can still contain a child `grid` object.
+ */
+
+.no-flexbox {
+    .o-grid__cell--right {
+        display: block;
+        margin-left: auto;
+    }
+}
+
+/* Grid units (responsive)
+   ========================================================================== */
+
+@include m-grid-build(1 2 3 4);
+
+@include m-bp-more-than($bp-xs-min) {
+    @include m-grid-build(1 2 3 4, '--#{size-mod-xs}');
+}
+
+@include m-bp-more-than($bp-s-min) {
+    @include m-grid-build(1 2 3 4, '--#{size-mod-s}');
+}
+
+@include m-bp-more-than($bp-m-min) {
+    @include m-grid-build(1 2 3 4, '--#{size-mod-m}');
+}
+
+@include m-bp-more-than($bp-l-min) {
+    @include m-grid-build(1 2 3 4, '--#{size-mod-l}');
+}
+
+@include m-bp-more-than($bp-xl-min) {
+    @include m-grid-build(1 2 3 4, '--#{size-mod-xl}');
+}

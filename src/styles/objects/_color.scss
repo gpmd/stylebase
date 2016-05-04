@@ -1,0 +1,41 @@
+/**
+ * objects/_color.scss
+ */
+
+/* ==========================================================================
+   Color
+   ========================================================================== */
+
+/* Color vars
+   ========================================================================== */
+
+$colors:
+    ('black' $c-black),
+    ('white' $c-white),
+    ('light-grey' $c-grey-light),
+    ('medium-grey' $c-grey-medium),
+    ('dark-grey' $c-grey-dark),
+    ('darkest-grey' $c-grey-darkest),
+    ('success' $c-success),
+    ('error' $c-error),
+    ('info' $c-info),
+    ('warning' $c-warning);
+
+/* Generate colors
+   ========================================================================== */
+
+/**
+ * Auto generate color, background-color and border-color selectors
+ */
+
+@each $color in $colors {
+    $color-name: nth($color, 1);
+    $text-color: nth($color, 2);
+    $background-color: nth($color, 2);
+    $border-color: nth($color, 2);
+
+    // Color selectors
+    .o-color--#{$color-name} { color: $text-color !important; }
+    .o-bg-color--#{$color-name} { background-color: $background-color !important; }
+    .o-bdr-color--#{$color-name} { border-color: $border-color !important; }
+}

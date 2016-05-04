@@ -1,0 +1,18 @@
+/**
+ * tools/grid.less
+ */
+
+/* ==========================================================================
+   Grid
+   ========================================================================== */
+
+/**
+ * Used by the grid object to create grid cell units
+ */
+
+.m-grid(@g-modifier; @g-columns; @g-index: 1) when (@g-index =< @g-columns) {
+  .m-grid(@g-modifier; @g-columns; (@g-index + 1));
+  .o-unit-@{g-index}-@{g-columns}@{g-modifier} {
+    width: (percentage(@g-index/@g-columns));
+  }
+}

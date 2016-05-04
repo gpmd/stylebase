@@ -1,0 +1,18 @@
+/**
+ * tools/transitions.less
+ */
+
+/* ==========================================================================
+   Transition mixin
+   ========================================================================== */
+/*
+ * Usage:
+ * .transition(border-top .25s linear, color .5s linear;); // semicolon after arguments is necessary
+ */
+
+.m-transition(...) {
+  -webkit-transition: @arguments;
+  -moz-transition: @arguments;
+  -o-transition: @arguments;
+  transition: @arguments;
+}

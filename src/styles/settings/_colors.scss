@@ -1,0 +1,40 @@
+// scss-lint:disable VendorPrefixes, ColorVariable
+
+/**
+ * settings/_colors.scss
+ */
+
+/* ==========================================================================
+   Colors
+   ========================================================================== */
+
+/* Core
+   ========================================================================== */
+
+$c-black: rgb(0, 0, 0) !default;
+$c-white: rgb(255, 255, 255) !default;
+$c-transparent: transparent !default;
+
+/* Greys
+   ========================================================================== */
+
+$c-grey-darkest: rgb(35, 35, 35) !default;
+$c-grey-dark: rgb(84, 83, 83) !default;
+$c-grey-medium: rgb(204, 204, 204) !default;
+$c-grey-light: rgb(238, 238, 238) !default;
+
+/* Highlights
+   ========================================================================== */
+
+$c-success: rgb(62, 197, 157);
+$c-error: rgb(255, 89, 107);
+$c-info: rgb(115, 177, 214);
+$c-warning: rgb(255, 209, 122);
+
+/* Typography
+   ========================================================================== */
+
+$c-base-font: $c-grey-darkest !default;
+$c-base-link: $c-grey-medium !default;
+$c-base-heading: $c-base-font !default;
+$c-base-subheading: $c-grey-medium !default;

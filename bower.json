@@ -1,0 +1,17 @@
+{
+  "name": "lapicida-styleguide",
+  "version": "1.0.0",
+  "devDependencies": {
+    "jquery": "1.12.3"
+  },
+  "dependencies": {
+    "sanitize-css": "^3.3.0",
+    "normalize-opentype.css": "~0.2.4",
+    "modernizr": "~3.3.1",
+    "picturefill": "~3.0.2",
+    "equalize-heights": "~1.0.0",
+    "loadJS": "https://github.com/filamentgroup/loadJS.git#0.2.3",
+    "CSS3MultiColumn": "*",
+    "requirejs": "^2.2.0"
+  }
+}
