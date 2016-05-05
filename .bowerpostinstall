@@ -9,3 +9,14 @@ then
 else
     echo ""
 fi
+
+# rename normalize for Sass
+pre_rename_normalize="bower_components/normalize-css/normalize.css"
+post_rename_normalize="bower_components/normalize-css/_normalize.scss"
+if ! [ -f "$post_rename_normalize" ]
+then
+    echo "Copying: $pre_rename_normalize => $post_rename_normalize"
+    cp "$pre_rename_normalize" "$post_rename_normalize"
+else
+    echo ""
+fi

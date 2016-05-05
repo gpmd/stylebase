@@ -31,12 +31,11 @@ h4,
 h5,
 h6 {
     font-family: $display-heading;
-    font-weight: normal;
+    font-weight: bold;
     font-style: normal;
-    text-transform: uppercase;
     text-rendering: optimizeLegibility;
-    line-height: 1.25; // Tighten line-height up for headings
     color: $c-base-heading;
+    margin: 0 0 $base-spacing-unit*2;
 }
 
 /**
@@ -75,30 +74,12 @@ h5, .h5 {
 
 h6, .h6 { font-size: $font-size-h6; }
 
-/**
- * Margins
- */
-
-// Three quarters the height of the font-size
-h1 { margin: 0 0 0.75em; }
-h2 { margin: 0 0 0.75em; }
-
-// The height of the font size
-h3 { margin: 0 0 1em; }
-
-// 1.5 times the height of the font-size
-h4,
-h5,
-h6 {
-    margin: 0 0 1.5em;
-}
-
 /* General
    ========================================================================== */
 
 /* Paragraphs */
 
-p { margin-bottom: 2em; } // Twice the height of the font size
+p { margin-bottom: $base-spacing-unit*2; }
 
 strong,
 b { font-weight: bold; }
@@ -113,7 +94,7 @@ blockquote {
     font-size: $font-size-blockquote;
     text-transform: uppercase;
     padding: 0;
-    margin: 1em 0;
+    margin: $base-spacing-unit*2 0;
 
     // Inherit blockquote styles
     p,
@@ -130,7 +111,7 @@ hr {
     border-left: none;
     border-right: none;
     border-top: none;
-    margin: 3em 0;
+    margin: $base-spacing-unit*2 0;
 }
 
 /* Improve readability of pre-formatted text */

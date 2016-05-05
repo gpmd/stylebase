@@ -12,6 +12,7 @@
     "equalize-heights": "~1.0.0",
     "loadJS": "https://github.com/filamentgroup/loadJS.git#0.2.3",
     "CSS3MultiColumn": "*",
-    "requirejs": "^2.2.0"
+    "requirejs": "^2.2.0",
+    "normalize-css": "normalize.css#^4.1.1"
   }
 }

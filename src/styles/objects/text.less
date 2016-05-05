@@ -9,8 +9,8 @@
 /* Family modifiers
    ========================================================================== */
 
-.o-font-family--arial { font-family: $arial !important; }
-.o-font-family--georgia { font-family: $georgia !important; }
+.o-font-family--arial { font-family: @arial !important; }
+.o-font-family--georgia { font-family: @georgia !important; }
 
 /* Hide
    ========================================================================== */
@@ -55,13 +55,13 @@
 /* Vars */
 
 @font-size-array:
-  @size-mod-xxl @font-size-xxl,
-  @size-mod-xl @font-size-xl,
-  @size-mod-l @font-size-l,
-  @size-mod-m @font-size-m,
-  @size-mod-s @font-size-s,
-  @size-mod-xs @font-size-xs,
-  @size-mod-xxs @font-size-xxs;
+  ~'@{size-mod-xxl}' @font-size-xxl,
+  ~'@{size-mod-xl}' @font-size-xl,
+  ~'@{size-mod-l}' @font-size-l,
+  ~'@{size-mod-m}' @font-size-m,
+  ~'@{size-mod-s}' @font-size-s,
+  ~'@{size-mod-xs}' @font-size-xs,
+  ~'@{size-mod-xxs}' @font-size-xxs;
 
 /**
  * Generate fontsize classes
@@ -85,13 +85,13 @@
 /* Vars */
 
 @line-height-array:
-  @size-mod-xxl @line-height-xxl,
-  @size-mod-xl @line-height-xl,
-  @size-mod-l @line-height-l,
-  @size-mod-m @line-height-m,
-  @size-mod-s @line-height-s,
-  @size-mod-xs @line-height-xs,
-  @size-mod-xxs @line-height-xxs;
+  ~'@{size-mod-xxl}' @line-height-xxl,
+  ~'@{size-mod-xl}' @line-height-xl,
+  ~'@{size-mod-l}' @line-height-l,
+  ~'@{size-mod-m}' @line-height-m,
+  ~'@{size-mod-s}' @line-height-s,
+  ~'@{size-mod-xs}' @line-height-xs,
+  ~'@{size-mod-xxs}' @line-height-xxs;
 
 /**
  * Generate lineheight classes
