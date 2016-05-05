@@ -6,7 +6,11 @@
    Style Guide
    ========================================================================== */
 
-/* Colours
+/* Colour swatches
    ========================================================================== */
 
-.color-swatch__prop { width: 100%; }
+.c-color-swatch { margin-bottom: $base-spacing-unit*2; }
+
+.c-color-swatch__content {}
+
+.c-color-swatch__prop { width: 100%; }
