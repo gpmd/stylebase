@@ -29,11 +29,8 @@
 /* Layout
    ========================================================================== */
 
-/**
- * Based on a :root font-size of 16px
- */
-
-@gutter: 1.250em; // 20px
+@base-spacing-unit: 0.625em; // 10px
+@gutter: @base-spacing-unit*2; // 20px
 
 /* Containers
    ========================================================================== */
@@ -44,5 +41,3 @@
 @container-l: @bp-l-min;
 @container-xl: @bp-xl-min;
 @container-max: 100%;
-
-@container-padding: @gutter;

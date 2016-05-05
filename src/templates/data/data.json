@@ -1,0 +1,15 @@
+{
+  "colours": {
+    "names": [
+      "black",
+      "light-grey",
+      "medium-grey",
+      "dark-grey",
+      "darkest-grey",
+      "success",
+      "error",
+      "info",
+      "warning"
+    ]
+  }
+}

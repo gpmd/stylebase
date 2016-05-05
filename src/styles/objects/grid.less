@@ -142,11 +142,11 @@
  */
 
 .o-grid--has-gutter {
-  margin-left: -@gutter*2;
+  margin-left: -@grid-gutter;
 
   .o-grid__cell {
-    padding-left: @gutter*2;
-    padding-bottom: @gutter*2;
+    padding-left: @grid-gutter;
+    padding-bottom: @grid-gutter;
   }
 }
 
@@ -224,14 +224,96 @@
 
 /**
  * Unit classes - Uses grid mixin
+ *
+ * @todo make code more dry by looping over column numbers programmatically
  */
 
-// Default - no modifier, 4 columns
-.m-grid(~''; @grid-columns);
+// Default - no modifier, 1-12 columns
+.m-grid(~''; 1);
+.m-grid(~''; 2);
+.m-grid(~''; 3);
+.m-grid(~''; 4);
+.m-grid(~''; 5);
+.m-grid(~''; 6);
+.m-grid(~''; 7);
+.m-grid(~''; 8);
+.m-grid(~''; 9);
+.m-grid(~''; 10);
+.m-grid(~''; 11);
+.m-grid(~''; 12);
 
 // Media query modifier overrides
-.m-bp-more-than(@bp-xs-min; { .m-grid(~'--@{size-mod-xs}'; @grid-columns); });
-.m-bp-more-than(@bp-s-min; { .m-grid(~'--@{size-mod-s}'; @grid-columns); });
-.m-bp-more-than(@bp-m-min; { .m-grid(~'--@{size-mod-m}'; @grid-columns); });
-.m-bp-more-than(@bp-l-min; { .m-grid(~'--@{size-mod-l}'; @grid-columns); });
-.m-bp-more-than(@bp-xl-min; { .m-grid(~'--@{size-mod-xl}'; @grid-columns); });
+.m-bp-more-than(@bp-xs-min; {
+  .m-grid(~'--@{size-mod-xs}'; 1);
+  .m-grid(~'--@{size-mod-xs}'; 2);
+  .m-grid(~'--@{size-mod-xs}'; 3);
+  .m-grid(~'--@{size-mod-xs}'; 4);
+  .m-grid(~'--@{size-mod-xs}'; 5);
+  .m-grid(~'--@{size-mod-xs}'; 6);
+  .m-grid(~'--@{size-mod-xs}'; 7);
+  .m-grid(~'--@{size-mod-xs}'; 8);
+  .m-grid(~'--@{size-mod-xs}'; 9);
+  .m-grid(~'--@{size-mod-xs}'; 10);
+  .m-grid(~'--@{size-mod-xs}'; 11);
+  .m-grid(~'--@{size-mod-xs}'; 12);
+});
+
+.m-bp-more-than(@bp-s-min; {
+  .m-grid(~'--@{size-mod-s}'; 1);
+  .m-grid(~'--@{size-mod-s}'; 2);
+  .m-grid(~'--@{size-mod-s}'; 3);
+  .m-grid(~'--@{size-mod-s}'; 4);
+  .m-grid(~'--@{size-mod-s}'; 5);
+  .m-grid(~'--@{size-mod-s}'; 6);
+  .m-grid(~'--@{size-mod-s}'; 7);
+  .m-grid(~'--@{size-mod-s}'; 8);
+  .m-grid(~'--@{size-mod-s}'; 9);
+  .m-grid(~'--@{size-mod-s}'; 10);
+  .m-grid(~'--@{size-mod-s}'; 11);
+  .m-grid(~'--@{size-mod-s}'; 12);
+});
+
+.m-bp-more-than(@bp-m-min; {
+  .m-grid(~'--@{size-mod-m}'; 1);
+  .m-grid(~'--@{size-mod-m}'; 2);
+  .m-grid(~'--@{size-mod-m}'; 3);
+  .m-grid(~'--@{size-mod-m}'; 4);
+  .m-grid(~'--@{size-mod-m}'; 5);
+  .m-grid(~'--@{size-mod-m}'; 6);
+  .m-grid(~'--@{size-mod-m}'; 7);
+  .m-grid(~'--@{size-mod-m}'; 8);
+  .m-grid(~'--@{size-mod-m}'; 9);
+  .m-grid(~'--@{size-mod-m}'; 10);
+  .m-grid(~'--@{size-mod-m}'; 11);
+  .m-grid(~'--@{size-mod-m}'; 12);
+});
+
+.m-bp-more-than(@bp-l-min; {
+  .m-grid(~'--@{size-mod-l}'; 1);
+  .m-grid(~'--@{size-mod-l}'; 2);
+  .m-grid(~'--@{size-mod-l}'; 3);
+  .m-grid(~'--@{size-mod-l}'; 4);
+  .m-grid(~'--@{size-mod-l}'; 5);
+  .m-grid(~'--@{size-mod-l}'; 6);
+  .m-grid(~'--@{size-mod-l}'; 7);
+  .m-grid(~'--@{size-mod-l}'; 8);
+  .m-grid(~'--@{size-mod-l}'; 9);
+  .m-grid(~'--@{size-mod-l}'; 10);
+  .m-grid(~'--@{size-mod-l}'; 11);
+  .m-grid(~'--@{size-mod-l}'; 12);
+});
+
+.m-bp-more-than(@bp-xl-min; {
+  .m-grid(~'--@{size-mod-xl}'; 1);
+  .m-grid(~'--@{size-mod-xl}'; 2);
+  .m-grid(~'--@{size-mod-xl}'; 3);
+  .m-grid(~'--@{size-mod-xl}'; 4);
+  .m-grid(~'--@{size-mod-xl}'; 5);
+  .m-grid(~'--@{size-mod-xl}'; 6);
+  .m-grid(~'--@{size-mod-xl}'; 7);
+  .m-grid(~'--@{size-mod-xl}'; 8);
+  .m-grid(~'--@{size-mod-xl}'; 9);
+  .m-grid(~'--@{size-mod-xl}'; 10);
+  .m-grid(~'--@{size-mod-xl}'; 11);
+  .m-grid(~'--@{size-mod-xl}'; 12);
+});

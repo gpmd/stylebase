@@ -44,7 +44,7 @@ module.exports = function(grunt, data) {
         '<%= project.src %>/templates/**/*.html'
       ],
       tasks: [
-        'htmlbuild:dist'
+        'bake:dist'
       ]
     }
   };

@@ -29,11 +29,8 @@ $one-whole: 100% !default;
 /* Layout
    ========================================================================== */
 
-/**
- * Based on a :root font-size of 16px
- */
-
-$gutter: 1.250em !default; // 20px
+$base-spacing-unit: 0.625em !default; // 10px
+$gutter: $base-spacing-unit*2 !default; // 20px
 
 /* Containers
    ========================================================================== */
@@ -44,5 +41,3 @@ $container-m: $bp-m-min !default;
 $container-l: $bp-l-min !default;
 $container-xl: $bp-xl-min !default;
 $container-max: 100% !default;
-
-$container-padding: $gutter !default;

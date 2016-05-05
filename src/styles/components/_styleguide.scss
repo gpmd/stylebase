@@ -1,13 +1,12 @@
-/**
- * generic/_critical.scss
+/*
+ * components/styleguide.scss
  */
 
 /* ==========================================================================
-   Imports
+   Style Guide
    ========================================================================== */
 
-/* Normalizing and resets
+/* Colours
    ========================================================================== */
 
-@import '../../../bower_components/sanitize-css/lib/sanitize';
-@import 'root';
+.color-swatch__prop { width: 100%; }

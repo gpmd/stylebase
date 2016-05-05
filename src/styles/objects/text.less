@@ -43,7 +43,7 @@
   //overflow: hidden;
 }
 
-/* Size modifiers
+/* Size
    ========================================================================== */
 
 // Smaller
@@ -51,6 +51,63 @@
 
 // Larger
 .o-font-size--larger { font-size: larger !important; }
+
+/* Vars */
+
+@font-size-array:
+  @size-mod-xxl @font-size-xxl,
+  @size-mod-xl @font-size-xl,
+  @size-mod-l @font-size-l,
+  @size-mod-m @font-size-m,
+  @size-mod-s @font-size-s,
+  @size-mod-xs @font-size-xs,
+  @size-mod-xxs @font-size-xxs;
+
+/**
+ * Generate fontsize classes
+ */
+
+.creatfontsizeclasses(@font-size-iterator:1) when(@font-size-iterator <= length(@font-size-array)) {
+  @font-size-name: extract(extract(@font-size-array, @font-size-iterator),1);
+
+  .o-font-size--@{font-size-name} { font-size: extract(extract(@font-size-array, @font-size-iterator),2); }
+
+  .creatfontsizeclasses((@font-size-iterator + 1));
+}
+
+// The end parenthesis means the mixin class itself will not be output
+// http://lesscss.org/features/#mixins-feature-not-outputting-the-mixin
+.creatfontsizeclasses();
+
+/* Line height
+   ========================================================================== */
+
+/* Vars */
+
+@line-height-array:
+  @size-mod-xxl @line-height-xxl,
+  @size-mod-xl @line-height-xl,
+  @size-mod-l @line-height-l,
+  @size-mod-m @line-height-m,
+  @size-mod-s @line-height-s,
+  @size-mod-xs @line-height-xs,
+  @size-mod-xxs @line-height-xxs;
+
+/**
+ * Generate lineheight classes
+ */
+
+.creatlineheightclasses(@line-height-iterator:1) when(@line-height-iterator <= length(@line-height-array)) {
+  @line-height-name: extract(extract(@line-height-array, @line-height-iterator),1);
+
+  .o-line-height--@{line-height-name} { line-height: extract(extract(@line-height-array, @line-height-iterator),2); }
+
+  .creatlineheightclasses((@line-height-iterator + 1));
+}
+
+// The end parenthesis means the mixin class itself will not be output
+// http://lesscss.org/features/#mixins-feature-not-outputting-the-mixin
+.creatlineheightclasses();
 
 /* Weight
    ========================================================================== */
