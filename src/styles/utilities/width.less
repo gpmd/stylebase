@@ -33,7 +33,7 @@
 .creatwidthclasses(@width-iterator:1) when(@width-iterator <= length(@width-array)) {
   @width-name: extract(extract(@width-array, @width-iterator),1);
 
-  .o-width--@{width-name} { opacity: extract(extract(@width-array, @width-iterator),2); }
+  .u-width--@{width-name} { opacity: extract(extract(@width-array, @width-iterator),2); }
 
   .creatwidthclasses((@width-iterator + 1));
 }

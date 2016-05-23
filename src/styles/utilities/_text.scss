@@ -9,13 +9,13 @@
 /* Family modifiers
    ========================================================================== */
 
-.o-font-family--arial { font-family: $arial !important; }
-.o-font-family--georgia { font-family: $georgia !important; }
+.u-font-family--arial { font-family: $arial !important; }
+.u-font-family--georgia { font-family: $georgia !important; }
 
 /* Hide
    ========================================================================== */
 
-.o-hide-text {
+.u-hide-text {
     /* Method 1 */
 
     position: absolute;
@@ -47,10 +47,10 @@
    ========================================================================== */
 
 // Smaller
-.o-font-size--smaller { font-size: smaller !important; }
+.u-font-size--smaller { font-size: smaller !important; }
 
 // Larger
-.o-font-size--larger { font-size: larger !important; }
+.u-font-size--larger { font-size: larger !important; }
 
 /* Vars */
 
@@ -71,7 +71,7 @@ $font-sizes:
     $font-size-name: nth($font-size, 1);
     $font-size-value: nth($font-size, 2);
 
-    .o-font-size--#{$font-size-name} { font-size: $font-size-value !important; }
+    .u-font-size--#{$font-size-name} { font-size: $font-size-value !important; }
 }
 
 /* Line height
@@ -96,56 +96,56 @@ $line-heights:
     $line-height-name: nth($line-height, 1);
     $line-height-value: nth($line-height, 2);
 
-    .o-line-height--#{$line-height-name} { line-height: $line-height-value !important; }
+    .u-line-height--#{$line-height-name} { line-height: $line-height-value !important; }
 }
 
 /* Weight
    ========================================================================== */
 
-.o-font-weight--normal { font-weight: normal !important; }
+.u-font-weight--normal { font-weight: normal !important; }
 
-.o-font-weight--bold { font-weight: bold !important; }
+.u-font-weight--bold { font-weight: bold !important; }
 
 /* Style
    ========================================================================== */
 
-.o-font-style--normal { font-style: normal !important; }
+.u-font-style--normal { font-style: normal !important; }
 
-.o-font-style--italic { font-style: italic !important; }
+.u-font-style--italic { font-style: italic !important; }
 
 /* Decoration
    ========================================================================== */
 
-.o-text-decoration--line-through { text-decoration: line-through !important; }
+.u-text-decoration--line-through { text-decoration: line-through !important; }
 
 /* Transform
    ========================================================================== */
 
-.o-text-transform--uppercase { text-transform: uppercase !important; }
+.u-text-transform--uppercase { text-transform: uppercase !important; }
 
 /* Line height
    ========================================================================== */
 
-.o-line-height--reset { line-height: 1 !important; }
+.u-line-height--reset { line-height: 1 !important; }
 
 /* Alignment
    ========================================================================== */
 
-.o-text-align--right { text-align: right !important; }
+.u-text-align--right { text-align: right !important; }
 
-.o-text-align--center { text-align: center !important; }
+.u-text-align--center { text-align: center !important; }
 
-.o-text-align--left { text-align: left !important; }
+.u-text-align--left { text-align: left !important; }
 
 /* Word break
    ========================================================================== */
 
-.o-word--break { word-wrap: break-word !important; }
+.u-word--break { word-wrap: break-word !important; }
 
 /* Truncate
    ========================================================================== */
 
-.o-text--truncate {
+.u-text--truncate {
     max-width: 100%;
     overflow: hidden !important;
     text-overflow: ellipsis !important;

@@ -27,13 +27,13 @@
 .creatmarginclasses(@margin-iterator:1) when(@margin-iterator <= length(@margin-array)) {
   @margin-name: extract(extract(@margin-array, @margin-iterator),1);
 
-  .o-margin-right--@{margin-name} { margin-right: extract(extract(@margin-array, @margin-iterator),2) !important; }
-  .o-margin-btm--@{margin-name} { margin-bottom: extract(extract(@margin-array, @margin-iterator),2) !important; }
-  .o-margin-left--@{margin-name} { margin-left: extract(extract(@margin-array, @margin-iterator),2) !important; }
-  .o-margin-top--@{margin-name} { margin-top: extract(extract(@margin-array, @margin-iterator),2) !important; }
-  .o-margin-horz--@{margin-name} { margin: 0 extract(extract(@margin-array, @margin-iterator),2) !important; }
-  .o-margin-vert--@{margin-name} { margin: extract(extract(@margin-array, @margin-iterator),2) 0 !important; }
-  .o-margin-all--@{margin-name} { margin: extract(extract(@margin-array, @margin-iterator),2) !important; }
+  .u-margin-right--@{margin-name} { margin-right: extract(extract(@margin-array, @margin-iterator),2) !important; }
+  .u-margin-btm--@{margin-name} { margin-bottom: extract(extract(@margin-array, @margin-iterator),2) !important; }
+  .u-margin-left--@{margin-name} { margin-left: extract(extract(@margin-array, @margin-iterator),2) !important; }
+  .u-margin-top--@{margin-name} { margin-top: extract(extract(@margin-array, @margin-iterator),2) !important; }
+  .u-margin-horz--@{margin-name} { margin: 0 extract(extract(@margin-array, @margin-iterator),2) !important; }
+  .u-margin-vert--@{margin-name} { margin: extract(extract(@margin-array, @margin-iterator),2) 0 !important; }
+  .u-margin-all--@{margin-name} { margin: extract(extract(@margin-array, @margin-iterator),2) !important; }
 
   .creatmarginclasses((@margin-iterator + 1));
 }

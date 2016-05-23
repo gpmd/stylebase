@@ -42,7 +42,7 @@
 .creatopacityclasses(@opacity-iterator:1) when(@opacity-iterator <= length(@opacity-array)) {
   @opacity-name: extract(extract(@opacity-array, @opacity-iterator),1);
 
-  .o-opacity--@{opacity-name} { opacity: extract(extract(@opacity-array, @opacity-iterator),2); }
+  .u-opacity--@{opacity-name} { opacity: extract(extract(@opacity-array, @opacity-iterator),2); }
 
   .creatopacityclasses((@opacity-iterator + 1));
 }

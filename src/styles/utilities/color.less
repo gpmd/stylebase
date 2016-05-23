@@ -31,9 +31,9 @@
 .creatcolourclasses(@color-iterator:1) when(@color-iterator <= length(@color-array)) {
   @color-name: extract(extract(@color-array, @color-iterator),1);
 
-  .o-color--@{color-name} { color: extract(extract(@color-array, @color-iterator),2); }
-  .o-bg-color--@{color-name} { background-color: extract(extract(@color-array, @color-iterator),2); }
-  .o-bdr-color--@{color-name} { border-color: extract(extract(@color-array, @color-iterator),2); }
+  .u-color--@{color-name} { color: extract(extract(@color-array, @color-iterator),2); }
+  .u-bg-color--@{color-name} { background-color: extract(extract(@color-array, @color-iterator),2); }
+  .u-bdr-color--@{color-name} { border-color: extract(extract(@color-array, @color-iterator),2); }
 
   .creatcolourclasses((@color-iterator + 1));
 }

@@ -27,13 +27,13 @@
 .creatpaddingclasses(@padding-iterator:1) when(@padding-iterator <= length(@padding-array)) {
   @padding-name: extract(extract(@padding-array, @padding-iterator),1);
 
-  .o-padding-right--@{padding-name} { margin-right: extract(extract(@padding-array, @padding-iterator),2) !important; }
-  .o-padding-btm--@{padding-name} { margin-bottom: extract(extract(@padding-array, @padding-iterator),2) !important; }
-  .o-padding-left--@{padding-name} { margin-left: extract(extract(@padding-array, @padding-iterator),2) !important; }
-  .o-padding-top--@{padding-name} { margin-top: extract(extract(@padding-array, @padding-iterator),2) !important; }
-  .o-padding-horz--@{padding-name} { margin: 0 extract(extract(@padding-array, @padding-iterator),2) !important; }
-  .o-padding-vert--@{padding-name} { margin: extract(extract(@padding-array, @padding-iterator),2) 0 !important; }
-  .o-padding-all--@{padding-name} { margin: extract(extract(@padding-array, @padding-iterator),2) !important; }
+  .u-padding-right--@{padding-name} { margin-right: extract(extract(@padding-array, @padding-iterator),2) !important; }
+  .u-padding-btm--@{padding-name} { margin-bottom: extract(extract(@padding-array, @padding-iterator),2) !important; }
+  .u-padding-left--@{padding-name} { margin-left: extract(extract(@padding-array, @padding-iterator),2) !important; }
+  .u-padding-top--@{padding-name} { margin-top: extract(extract(@padding-array, @padding-iterator),2) !important; }
+  .u-padding-horz--@{padding-name} { margin: 0 extract(extract(@padding-array, @padding-iterator),2) !important; }
+  .u-padding-vert--@{padding-name} { margin: extract(extract(@padding-array, @padding-iterator),2) 0 !important; }
+  .u-padding-all--@{padding-name} { margin: extract(extract(@padding-array, @padding-iterator),2) !important; }
 
   .creatpaddingclasses((@padding-iterator + 1));
 }
