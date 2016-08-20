@@ -1,0 +1,38 @@
+/**
+ * objects/_margin.scss
+ */
+
+/* ==========================================================================
+   Margin
+   ========================================================================== */
+
+/* Margin vars
+   ========================================================================== */
+
+$margins:
+    ('none' 0),
+    ($size-mod-xs 0.5em),
+    ($size-mod-s 1em),
+    ($size-mod-m 2em),
+    ($size-mod-l 4em),
+    ($size-mod-xl 8em);
+
+/* Generate margin
+   ========================================================================== */
+
+/**
+ * Auto generate margin selectors
+ */
+
+@each $margin in $margins {
+    $margin-name: nth($margin, 1);
+    $margin-value: nth($margin, 2);
+
+    .u-margin-right--#{$margin-name} { margin-right: $margin-value !important; }
+    .u-margin-btm--#{$margin-name} { margin-bottom: $margin-value !important; }
+    .u-margin-left--#{$margin-name} { margin-left: $margin-value !important; }
+    .u-margin-top--#{$margin-name} { margin-top: $margin-value !important; }
+    .u-margin-horz--#{$margin-name} { margin: 0 $margin-value !important; }
+    .u-margin-vert--#{$margin-name} { margin: $margin-value 0 !important; }
+    .u-margin-all--#{$margin-name} { margin: $margin-value !important; }
+}

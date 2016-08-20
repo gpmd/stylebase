@@ -1,13 +1,18 @@
 /**
- * generic/_critical.scss
+ * objects/_visibility.scss
  */
 
 /* ==========================================================================
-   Imports
+   Visibility
    ========================================================================== */
 
-/* Normalizing and resets
+/* Visibility utilities
    ========================================================================== */
 
-@import '../../../bower_components/normalize-css/_normalize.scss';
-@import 'root';
+// Visibility visible
+
+.u-visibility--visible { visibility: visible !important; }
+
+// Visibility hidden
+
+.u-visibility--hidden { visibility: hidden !important; }

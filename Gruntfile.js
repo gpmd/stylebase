@@ -13,7 +13,7 @@ module.exports = function(grunt) {
       env: grunt.option('env') || 'prod',
 
       // less or sass
-      preprocessor: grunt.option('preprocessor') || 'less',
+      preprocessor: grunt.option('preprocessor') || 'sass',
 
       // Project paths
       project: {
